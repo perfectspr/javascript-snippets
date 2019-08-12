@@ -1,2 +1,2 @@
 # javascript-snippets
-Snippets for javascript es6, mocha, jest
+ES6+, Mocha, Jest snippets for Node, Vue, React, Typescript, HTML
