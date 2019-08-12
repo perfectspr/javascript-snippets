@@ -1,0 +1,955 @@
+{
+  "let assignment": {
+    "prefix": "la",
+    "body": "let ${1} = ${0}",
+    "description": "let assignment (ES2015)"
+  },
+  "const assignment": {
+    "prefix": "ca",
+    "body": "const ${1} = ${0}",
+    "description": "const assignment (ES2015)"
+  },
+  "let destructuring assignment": {
+    "prefix": "lad",
+    "body": "let ${0:dest} = ${1}",
+    "description": "let destructuring assignment (ES2015)"
+  },
+  "const destructuring assignment": {
+    "prefix": "cad",
+    "body": "const ${0:dest} = ${1}",
+    "description": "const destructuring assignment (ES2015)"
+  },
+  "if statement": {
+    "prefix": "if",
+    "body": "if (${1}) {${0}}",
+    "description": "if statement"
+  },
+  "else statement": {
+    "prefix": "else",
+    "body": "else {${0}}",
+    "description": "else statement"
+  },
+  "if/else statement": {
+    "prefix": "ifel",
+    "body": "if (${1}) {${2}} else {${0}}",
+    "description": "if/else statement"
+  },
+  "else if statement": {
+    "prefix": "elif",
+    "body": "else if (${1}) {${0}}",
+    "description": "else if statement"
+  },
+  "ternary operator": {
+    "prefix": "ter",
+    "body": "${1} ? ${2} : ${0}",
+    "description": "ternary operator"
+  },
+  "switch case": {
+    "prefix": "switch",
+    "body": "switch (${1}) {\n\tcase ${2} :\n\t\t$0\n\tdefault:\n\t\tbreak;\n}",
+    "description": "switch case"
+  },
+  "case": {
+    "prefix": "case",
+    "body": "case ${1} :\n\t${0}",
+    "description": "switch's case"
+  },
+  "for loop": {
+    "prefix": "for",
+    "body": "for (${1} ; ${2} ; ${3}) {\n\t${0}\n}",
+    "description": "for loop"
+  },
+  "for in loop": {
+    "prefix": "forin",
+    "body": "for (const ${1} in ${2}) {\n\tif (${2}.hasOwnProperty(${1})) {\n\t\t${0}\n\t}\n}",
+    "description": "for in loop"
+  },
+  "for of loop (ES2015)": {
+    "prefix": "forof",
+    "body": "for (const ${1} of ${2}) {\n\t${0}\n}",
+    "description": "for of loop (ES2015)"
+  },
+  "while loop": {
+    "prefix": "while",
+    "body": "while (${1}) {${0}}",
+    "description": "while loop"
+  },
+  "try/catch": {
+    "prefix": "tc",
+    "body": "try {${0}} catch (error) {${1}}",
+    "description": "try/catch"
+  },
+  "try/finally": {
+    "prefix": "tf",
+    "body": "try {${0}} finally {${1}}",
+    "description": "try/finally"
+  },
+  "try/catch/finally": {
+    "prefix": "tcf",
+    "body": "try {${0}} catch (error) {${1}} finally {${2}}",
+    "description": "try/catch/finally"
+  },
+  "anonymous function": {
+    "prefix": "f",
+    "body": "function(${1}) {${0}}",
+    "description": "anonymous function"
+  },
+  "named function": {
+    "prefix": "fn",
+    "body": "function ${1}(${2}) {${0}}",
+    "description": "named function"
+  },
+  "async anonymous function": {
+    "prefix": "fa",
+    "body": "async function (${1}) {${0}}",
+    "description": "async anonymous function"
+  },
+  "async named function": {
+    "prefix": "fna",
+    "body": "async function ${1}(${2}) {${0}}",
+    "description": "async named function"
+  },
+  "arrow function (ES2015)": {
+    "prefix": "af",
+    "body": "(${1}) => ${0}",
+    "description": "arrow function (ES2015)"
+  },
+  "async arrow function (ES2015)": {
+    "prefix": "afa",
+    "body": "async (${1}) => ${0}",
+    "description": "async arrow function (ES2015)"
+  },
+  "immediately-invoked function expression (IIFE)": {
+    "prefix": "iife",
+    "body": "(${2})(${1})${0}",
+    "description": "immediately-invoked function expression (IIFE)"
+  },
+  "generator function (ES2015)": {
+    "prefix": "gf",
+    "body": "function* (${1}) {${0}}",
+    "description": "generator function (ES2015)"
+  },
+  "async generator function (ES2018)": {
+    "prefix": "gfa",
+    "body": "async function* (${1}) {${0}}",
+    "description": "async generator function (ES2018)"
+  },
+  "named generator function (ES2015)": {
+    "prefix": "gfn",
+    "body": "function* ${1}(${2}) {${0}}",
+    "description": "named generator function (ES2015)"
+  },
+  "async named generator function (ES2018)": {
+    "prefix": "gfna",
+    "body": "async function* ${1}(${2}) {${0}}",
+    "description": "async named generator function (ES2018)"
+  },
+  "sequence of 0..n": {
+    "prefix": "seq",
+    "body": "[...Array(${1:length}).keys()]${0}",
+    "description": "sequence of 0..n"
+  },
+  "object literal": {
+    "prefix": "ol",
+    "body": "{ ${1}: ${0} }",
+    "description": "object literal"
+  },
+  "class (ES2015)": {
+    "prefix": "cs",
+    "body": "class ${1} {\n\t${0}\n}",
+    "description": "class (ES2015)"
+  },
+  "class extends (ES2015)": {
+    "prefix": "cse",
+    "body": "class ${1} extends ${2:base} {\n\t${0}\n}",
+    "description": "class extends (ES2015)"
+  },
+  "class constructor (ES2015)": {
+    "prefix": "ctor",
+    "body": "constructor(${1}) {${0}}",
+    "description": "class constructor (ES2015)"
+  },
+  "method (ES2015)": {
+    "prefix": "csm",
+    "body": "${1:name}(${2}) {${0}}",
+    "description": "method (ES2015)"
+  },
+  "async method (ES2015)": {
+    "prefix": "csma",
+    "body": "async ${1:name}(${2}) {${0}}",
+    "description": "async method (ES2015)"
+  },
+  "getter (ES2015)": {
+    "prefix": "gter",
+    "body": "get ${1:property}() {${0}}",
+    "description": "getter (ES2015)"
+  },
+  "setter (ES2015)": {
+    "prefix": "ster",
+    "body": "set ${1:property}(${2:value}) {${0}}",
+    "description": "setter (ES2015)"
+  },
+  "getter and setter (ES2015)": {
+    "prefix": "gs",
+    "body": "get ${1:property}() {${0}}\n\nset ${1:property}(${2:value}) {}",
+    "description": "getter and setter (ES2015)"
+  },
+  "typeof": {
+    "prefix": "tof",
+    "body": "typeof ${1:source} === ${0}",
+    "description": "typeof"
+  },
+  "instanceof": {
+    "prefix": "iof",
+    "body": "${1:source} instanceof ${0:Class}",
+    "description": "instanceof"
+  },
+  "Promise (ES2015)": {
+    "prefix": "pr",
+    "body": "new Promise(${0})",
+    "description": "Promise (ES2015)"
+  },
+  "Promise resolve (ES2015)": {
+    "prefix": "prs",
+    "body": "Promise.resolve(${1})${0}",
+    "description": "Promise resolve (ES2015)"
+  },
+  "Promise reject (ES2015)": {
+    "prefix": "prj",
+    "body": "Promise.reject(${1})${0}",
+    "description": "Promise reject (ES2015)"
+  },
+  "Promise all (ES2015)": {
+    "prefix": "pra",
+    "body": "Promise.all(${1})${0}",
+    "description": "Promise all (ES2015)"
+  },
+  "export (ES2015)": {
+    "prefix": "exp",
+    "body": "export ${0}",
+    "description": "export (ES2015)"
+  },
+  "export default (ES2015)": {
+    "prefix": "expd",
+    "body": "export default ${0}",
+    "description": "export default (ES2015)"
+  },
+  "export as (ES2015)": {
+    "prefix": "expas",
+    "body": "export ${1} as ${2};${0}",
+    "description": "export as (ES2015)"
+  },
+  "export from (ES2015)": {
+    "prefix": "expf",
+    "body": "export ${2:name} from '${1}';${0}",
+    "description": "export from (ES2015)"
+  },
+  "import module (ES2015)": {
+    "prefix": "imp",
+    "body": "import ${2:name} from '${1}';${0}",
+    "description": "import module (ES2015)"
+  },
+  "import file (ES2015)": {
+    "prefix": "impf",
+    "body": "import '${1}';${0}",
+    "description": "import file (ES2015)"
+  },
+  "import module as (ES2015)": {
+    "prefix": "impas",
+    "body": "import ${2:*} as ${3:name} from '${1}';${0}",
+    "description": "import module as (ES2015)"
+  },
+  "Node.js style callback": {
+    "prefix": "cb",
+    "body": "(err, ${1:response}) => {${0}}",
+    "description": "Node.js style callback"
+  },
+  "require": {
+    "prefix": "require",
+    "body": "require(${1:path})${0}",
+    "description": "require"
+  },
+  "require assignment": {
+    "prefix": "req",
+    "body": "const ${2:name} = require('${1}');${0}",
+    "description": "require assignment"
+  },
+  "exports.member": {
+    "prefix": "em",
+    "body": "exports.${1} = ${2};${0}",
+    "description": "exports.member"
+  },
+  "module.exports": {
+    "prefix": "me",
+    "body": "module.exports = ${1}${0}",
+    "description": "module.exports"
+  },
+  "event handler": {
+    "prefix": "on",
+    "body": "on('${1:event}', ${2:callback});${0}",
+    "description": "event handler"
+  },
+  "console.log": {
+    "prefix": "cl",
+    "body": "console.log(${1})${0}",
+    "description": "console.log"
+  },
+  "console.error": {
+    "prefix": "ce",
+    "body": "console.error(${1})${0}",
+    "description": "console.error"
+  },
+  "console.warn": {
+    "prefix": "cw",
+    "body": "console.warn(${1})${0}",
+    "description": "console.warn"
+  },
+  "console.log labeled": {
+    "prefix": "cll",
+    "body": "console.log('${1}', ${1})${0}",
+    "description": "console.log labeled"
+  },
+  "console.error labeled": {
+    "prefix": "cel",
+    "body": "console.error('${1}', ${1})${0}",
+    "description": "console.error labeled"
+  },
+  "console.warn labeled": {
+    "prefix": "cwl",
+    "body": "console.warn('${1}', ${1})${0}",
+    "description": "console.warn labeled"
+  },
+  "console.time": {
+    "prefix": "ct",
+    "body": "console.time('${1}')\n${0}\nconsole.timeEnd('${1}')",
+    "description": "console.time"
+  },
+  "setTimeout": {
+    "prefix": "sett",
+    "body": "setTimeout(${2:callback}, ${1:delay})${0}",
+    "description": "setTimeout"
+  },
+  "setInterval": {
+    "prefix": "setin",
+    "body": "setInterval(${2:callback}, ${1:delay})${0}",
+    "description": "setInterval"
+  },
+  "setImmediate": {
+    "prefix": "setim",
+    "body": "setImmediate(${1:callback}${2})${0}",
+    "description": "setImmediate (Node.JS)"
+  },
+  "process nextTick": {
+    "prefix": "nt",
+    "body": "process.nextTick(${1});${0}",
+    "description": "process nextTick (Node.JS)"
+  },
+  "insert 'use strict' statement": {
+    "prefix": "us",
+    "body": "'use strict';",
+    "description": "insert 'use strict' statement"
+  },
+  "type (TypeScript)": {
+    "prefix": "typ",
+    "scope": "typescript",
+    "body": "type ${1:name} = ${0}",
+    "description": "type (TypeScript)"
+  },
+  "interface (TypeScript)": {
+    "prefix": "int",
+    "scope": "typescript",
+    "body": "interface ${1:name} {${2}}${0}",
+    "description": "interface (TypeScript)"
+  },
+  "enum (TypeScript)": {
+    "prefix": "enum",
+    "scope": "typescript",
+    "body": "enum ${1:name} {${2}}${0}",
+    "description": "enum (TypeScript)"
+  },
+  "module (TypeScript)": {
+    "prefix": "mod",
+    "scope": "typescript",
+    "body": "module ${1:name} {${2}}${0}",
+    "description": "module (TypeScript)"
+  },
+  "namespace (TypeScript)": {
+    "prefix": "nam",
+    "scope": "typescript",
+    "body": "namespace ${1:name} {${2}}${0}",
+    "description": "namespace (TypeScript)"
+  },
+  "parameter destructuring with type (TypeScript)": {
+    "prefix": "pd",
+    "body": "${0:param} : ${1:type}",
+    "description": "parameter destructuring with type (TypeScript)"
+  },
+  "import": {
+    "prefix": "imp",
+    "body": "import ${2:moduleName} from '${1:module}';$0",
+    "description": "Imports entire module statement in ES6 syntax"
+  },
+  "importNoModuleName": {
+    "prefix": "imn",
+    "body": "import '${1:module}';$0",
+    "description": "Imports entire module in ES6 syntax without module name"
+  },
+  "importDestructing": {
+    "prefix": "imd",
+    "body": "import { $2 } from '${1:module}';$0",
+    "description": "Imports only a portion of the module in ES6 syntax"
+  },
+  "importEverything": {
+    "prefix": "ime",
+    "body": "import * as ${2:alias} from '${1:module}';$0",
+    "description": "Imports everything as alias from the module in ES6 syntax"
+  },
+  "importAs": {
+    "prefix": "ima",
+    "body": "import { ${2:originalName} as ${3:alias} } from '${1:module}';$0",
+    "description": "Imports a specific portion of the module by assigning a local alias in ES6 syntax"
+  },
+  "moduleExports": {
+    "prefix": "mde",
+    "body": "module.exports = {\n\t$0\n};\n",
+    "description": "Module exports from Common JS, node syntax at ES6"
+  },
+  "exportNamedFunction": {
+    "prefix": "enf",
+    "body": "export const ${1:functionName} = (${2:params}) => {\n\t$0\n};\n",
+    "description": "Export named function in ES6 syntax"
+  },
+  "exportDefaultFunction": {
+    "prefix": "edf",
+    "body": "export default (${1:params}) => {\n\t$0\n};\n",
+    "description": "Export default function in ES6 syntax"
+  },
+  "exportClass": {
+    "prefix": "ecl",
+    "body": "export default class ${1:className} {\n\t$0\n};\n",
+    "description": "Export default class in ES6 syntax"
+  },
+  "exportClassExtends": {
+    "prefix": "ece",
+    "body": "export default class ${1:className} extends ${2:baseclassName} {\n\t$0\n};\n",
+    "description": "Export default class which extends a base one in ES6 syntax"
+  },
+  "constructor": {
+    "prefix": "con",
+    "body": "constructor(${1:params}) {\n\t${0}\n}",
+    "description": "Add default constructor in a class in ES6 syntax"
+  },
+  "method": {
+    "prefix": "met",
+    "body": "${1:methodName}(${2:params}) {\n\t${0}\n}",
+    "description": "Creates a method inside a class in ES6 syntax"
+  },
+  "propertyGet": {
+    "prefix": "pge",
+    "body": "get ${1:propertyName}() {\n\treturn this.${0};\n}",
+    "description": "Creates a getter property inside a class in ES6 syntax"
+  },
+  "propertyset": {
+    "prefix": "pse",
+    "body": "set ${1:propertyName}(${2:value}) {\n\t${0};\n}",
+    "description": "Creates a setter property inside a class in ES6 syntax"
+  },
+  "forEach": {
+    "prefix": "fre",
+    "body": "${1:array}.forEach(${2:currentItem} => {\n\t${0}\n});",
+    "description": "Creates a forEach statement in ES6 syntax"
+  },
+  "forOf": {
+    "prefix": "fof",
+    "body": "for (const ${1:item} of ${2:object}) {\n\t${0}\n}",
+    "description": "Iterating over property names of iterable objects"
+  },
+  "forIn": {
+    "prefix": "fin",
+    "body": "for (const ${1:item} in ${2:object}) {\n\t${0}\n}",
+    "description": "Iterating over property values of iterable objects"
+  },
+  "anonymousFunction": {
+    "prefix": "anfn",
+    "body": "(${1:params}) => {\n\t${2}\n}",
+    "description": "Creates an anonymous function in ES6 syntax"
+  },
+  "namedFunction": {
+    "prefix": "nfn",
+    "body": "const ${1:name} = (${2:params}) => {\n\t${3}\n}",
+    "description": "Creates a named function in ES6 syntax"
+  },
+  "destructingObject": {
+    "prefix": "dob",
+    "body": "const {${2:propertyName}} = ${1:objectToDestruct};",
+    "description": "Creates and assigns a local variable using object destructing"
+  },
+  "destructingArray": {
+    "prefix": "dar",
+    "body": "const [${2:propertyName}] = ${1:arrayToDestruct};",
+    "description": "Creates and assigns a local variable using array destructing"
+  },
+  "setTimeOut": {
+    "prefix": "sto",
+    "body": "setTimeout(() => {\n\t${2}\n}, ${1:delayInms});",
+    "description": "Executes the given function after the specified delay in ES6 syntax"
+  },
+  "promise": {
+    "prefix": "prom",
+    "body": "return new Promise((resolve, reject) => {\n\t${1}\n});",
+    "description": "Creates and returns a new Promise in the standard ES6 syntax"
+  },
+  "thenCatch": {
+    "prefix": "thenc",
+    "body": ".then((${1:result}) => {\n\t${2}\n}).catch((${3:err}) => {\n\t${4}\n});",
+    "description": "Add the .then and .catch methods to handle promises"
+  },
+  "consoleAssert": {
+    "prefix": "cas",
+    "body": "console.assert(${1:expression}, ${2:object});",
+    "description": "If the specified expression is false, the message is written to the console along with a stack trace"
+  },
+  "consoleClear": {
+    "prefix": "ccl",
+    "body": "console.clear();",
+    "description": "Clears the console"
+  },
+  "consoleCount": {
+    "prefix": "cco",
+    "body": "console.count(${1:label});",
+    "description": "Writes the the number of times that count() has been invoked at the same line and with the same label"
+  },
+  "consoleDir": {
+    "prefix": "cdi",
+    "body": "console.dir(${1:object});",
+    "description": "Prints a JavaScript representation of the specified object"
+  },
+  "consoleError": {
+    "prefix": "cer",
+    "body": "console.error(${1:object});",
+    "description": "Displays a message in the console and also includes a stack trace from where the method was called"
+  },
+  "consoleGroup": {
+    "prefix": "cgr",
+    "body": "console.group(\"${1:label}\");",
+    "description": "Groups and indents all following output by an additional level, until console.groupEnd() is called."
+  },
+  "consoleGroupEnd": {
+    "prefix": "cge",
+    "body": "console.groupEnd();",
+    "description": "Closes out the corresponding console.group()."
+  },
+  "consoleLog": {
+    "prefix": "clg",
+    "body": "console.log(${1:object});",
+    "description": "Displays a message in the console"
+  },
+  "consoleLogObject": {
+    "prefix": "clo",
+    "body": "console.log('${1:object} :', ${1:object});",
+    "description": "Displays an object in the console with its name"
+  },
+  "consoleTrace": {
+    "prefix": "ctr",
+    "body": "console.trace(${1:object});",
+    "description": "Prints a stack trace from the point where the method was called"
+  },
+  "consoleWarn": {
+    "prefix": "cwa",
+    "body": "console.warn(${1:object});",
+    "description": "Displays a message in the console but also displays a yellow warning icon along with the logged message"
+  },
+  "consoleInfo": {
+    "prefix": "cin",
+    "body": "console.info(${1:object});",
+    "description": "Displays a message in the console but also displays a blue information icon along with the logged message"
+  },
+  "consoleTable": {
+    "prefix": "clt",
+    "body": "console.table(${1:object});",
+    "description": "Displays tabular data as a table."
+  },
+  "consoleTime": {
+    "prefix": "cti",
+    "body": "console.time(${1:object});",
+    "description": "Sets starting point for execution time measurement"
+  },
+  "consoleTimeEnd": {
+    "prefix": "cte",
+    "body": "console.timeEnd(${1:object});",
+    "description": "Sets end point for execution time measurement"
+  },
+  "afterAll": {
+    "body": "afterAll(() => {\n\t$0\n});",
+    "description": "afterAll function is called once after all specs",
+    "prefix": "aa",
+    "scope": "source.js"
+  },
+  "afterEach": {
+    "body": "afterEach(() => {\n\t$0\n});",
+    "description": "afterEach function is called once after each spec",
+    "prefix": "ae",
+    "scope": "source.js"
+  },
+  "beforeAll": {
+    "body": "beforeAll(() => {\n\t$0\n});",
+    "description": "beforeAll function is called once before all specs",
+    "prefix": "ba",
+    "scope": "source.js"
+  },
+  "beforeEach": {
+    "body": "beforeEach(() => {\n\t$0\n});",
+    "description": "beforeEach function is called once before each spec",
+    "prefix": "be",
+    "scope": "source.js"
+  },
+  "describe": {
+    "body": "describe('${1:Name of the group}', () => {\n\t$0\n});",
+    "description": "creates a describe block",
+    "prefix": "desc",
+    "scope": "source.js"
+  },
+  "describe.each": {
+    "body": [
+      "describe.each([${1:[1, 2], [2, 4]}])(",
+      "\t'${2:double(%d)}',",
+      "\t(${3:input, expected}) => {",
+      "\t\ttest(`returns \\${expected}`, () => {",
+      "\t\t\t${4:expect(double(input)).toBe(expected);}",
+      "\t\t});",
+      "\t}",
+      ");"
+    ],
+    "description": "creates a describe block with different test data sets",
+    "prefix": "desce",
+    "scope": "source.js"
+  },
+  "describe.only": {
+    "body": "describe.only('${1:Name of the group}', () => {\n\t$0\n});",
+    "description": "creates a describe block that runs only",
+    "prefix": "desco",
+    "scope": "source.js"
+  },
+  "describe.skip": {
+    "body": "describe.skip('${1:Name of the group}', () => {\n\t$0\n});",
+    "description": "creates a describe block that will be skipped",
+    "prefix": "descs",
+    "scope": "source.js"
+  },
+  "expect": {
+    "body": "expect($0)",
+    "description": "expect actual value",
+    "prefix": "exp",
+    "scope": "source.js"
+  },
+  "expect.assertions": {
+    "body": "expect.assertions($0);",
+    "description": "expects the test to make the indicated number of assertions (useful for async)",
+    "prefix": "expas",
+    "scope": "source.js"
+  },
+  "expect.hasAssertions": {
+    "body": "expect.hasAssertions();$0",
+    "description": "expects the test to make at least one assertion (useful for async)",
+    "prefix": "expha",
+    "scope": "source.js"
+  },
+  "expect.rejects": {
+    "body": "expect($1).rejects$0",
+    "description": "expect promise rejects to",
+    "prefix": "exprj",
+    "scope": "source.js"
+  },
+  "expect.resolves": {
+    "body": "expect($1).resolves$0",
+    "description": "expect promise resolves to",
+    "prefix": "expr",
+    "scope": "source.js"
+  },
+  "it": {
+    "body": "it('${1:should }', () => {\n\t$0\n});",
+    "description": "creates an it block",
+    "prefix": "it",
+    "scope": "source.js"
+  },
+  "it.each": {
+    "body": [
+      "it.each([${1:[1, 2], [2, 4]}])(",
+      "\t'${2:double(%d)}',",
+      "\t(${3:input, expected}) => {",
+      "\t\t${0:expect(double(input)).toBe(expected);}",
+      "\t}",
+      ");"
+    ],
+    "description": "creates an it block with different test data sets",
+    "prefix": "ite",
+    "scope": "source.js"
+  },
+  "it.only": {
+    "body": "it.only('${1:should }', () => {\n\t$0\n});",
+    "description": "creates an it block that runs only",
+    "prefix": "ito",
+    "scope": "source.js"
+  },
+  "it.skip": {
+    "body": "it.skip('${1:should }', () => {\n\t$0\n});",
+    "description": "creates an it block that will be skipped",
+    "prefix": "its",
+    "scope": "source.js"
+  },
+  "it.todo": {
+    "body": "it.todo('${1:should }');",
+    "description": "creates a test placeholder",
+    "prefix": "itt",
+    "scope": "source.js"
+  },
+  "it:async": {
+    "body": "it('${1:should }', async () => {\n\t$0\n});",
+    "description": "creates an it block with async callback function",
+    "prefix": "ita",
+    "scope": "source.js"
+  },
+  "jest.fn": {
+    "body": "jest.fn($0)",
+    "description": "creates jest.fn()",
+    "prefix": "jfn",
+    "scope": "source.js"
+  },
+  "template:cut": {
+    "body": [
+      "describe('${1:Name of the group}', () => {\n",
+      "\tlet ${2:cut};\n",
+      "\tbeforeEach(() => {\n\t\t$2 = $3;\n\t});\n",
+      "\ttest('${1:should }', () => {",
+      "\t\texpect($2).toBe($0);",
+      "\t});\n",
+      "});"
+    ],
+    "description": "creates a template to test a class under test",
+    "prefix": "cut",
+    "scope": "source.js"
+  },
+  "test": {
+    "body": "test('${1:should }', () => {\n\t$0\n});",
+    "description": "creates a test block",
+    "prefix": "test",
+    "scope": "source.js"
+  },
+  "test.each": {
+    "body": [
+      "test.each([${1:[1, 2], [2, 4]}])(",
+      "\t'${2:double(%d)}',",
+      "\t(${3:input, expected}) => {",
+      "\t\t${0:expect(double(input)).toBe(expected);}",
+      "\t}",
+      ");"
+    ],
+    "description": "creates an test block with different test data sets",
+    "prefix": "teste",
+    "scope": "source.js"
+  },
+  "test.only": {
+    "body": "test.only('${1:should }', () => {\n\t$0\n});",
+    "description": "creates a test block  that runs only",
+    "prefix": "testo",
+    "scope": "source.js"
+  },
+  "test.skip": {
+    "body": "test.skip('${1:should }', () => {\n\t$0\n});",
+    "description": "creates a test block that will be skipped",
+    "prefix": "tests",
+    "scope": "source.js"
+  },
+  "test.todo": {
+    "body": "test.todo('${1:should }');",
+    "description": "creates a test placeholder",
+    "prefix": "testt",
+    "scope": "source.js"
+  },
+  "test:async": {
+    "body": "test('${1:should }', async () => {\n\t$0\n});",
+    "description": "creates an test block with async callback function",
+    "prefix": "testa",
+    "scope": "source.js"
+  },
+  "toBe": {
+    "body": "expect($1).toBe($0);",
+    "description": "expects the first argument to be equal with the second one",
+    "prefix": "tb",
+    "scope": "source.js"
+  },
+  "toBeCloseTo": {
+    "body": "expect($1).toBeCloseTo(${2:number}, ${3:delta});$0",
+    "description": "expects the first argument to be close to the second one base on the delta",
+    "prefix": "tbct",
+    "scope": "source.js"
+  },
+  "toBeDefined": {
+    "body": "expect($1).toBeDefined();$0",
+    "description": "expects the argument is defined",
+    "prefix": "tbd",
+    "scope": "source.js"
+  },
+  "toBeFalsy": {
+    "body": "expect($1).toBeFalsy();$0",
+    "description": "expects the argument is falsy",
+    "prefix": "tbf",
+    "scope": "source.js"
+  },
+  "toBeGreaterThan": {
+    "body": "expect($1).toBeGreaterThan($0);",
+    "description": "expects the argument is greater than or equal",
+    "prefix": "tbgt",
+    "scope": "source.js"
+  },
+  "toBeGreaterThanOrEqual": {
+    "body": "expect($1).toBeGreaterThanOrEqual($0);",
+    "description": "expects the argument is greater than",
+    "prefix": "tbgte",
+    "scope": "source.js"
+  },
+  "toBeInstanceOf": {
+    "body": "expect($1).toBeInstanceOf($0);",
+    "description": "expects the argument is less than",
+    "prefix": "tbi",
+    "scope": "source.js"
+  },
+  "toBeLessThan": {
+    "body": "expect($1).toBeLessThan($0);",
+    "description": "expects the argument is less than",
+    "prefix": "tblt",
+    "scope": "source.js"
+  },
+  "toBeLessThanOrEqual": {
+    "body": "expect($1).toBeLessThanOrEqual($0);",
+    "description": "expects the argument is less than or equal",
+    "prefix": "tblte",
+    "scope": "source.js"
+  },
+  "toBeNull": {
+    "body": "expect($1).toBeNull();$0",
+    "description": "expects the argument is null",
+    "prefix": "tbn",
+    "scope": "source.js"
+  },
+  "toBeTruthy": {
+    "body": "expect($1).toBeTruthy();$0",
+    "description": "expects the argument is truthy",
+    "prefix": "tbt",
+    "scope": "source.js"
+  },
+  "toBeUndefined": {
+    "body": "expect($1).toBeUndefined();$0",
+    "description": "expects the argument is undefined",
+    "prefix": "tbu",
+    "scope": "source.js"
+  },
+  "toContain": {
+    "body": "expect(${1:list}).toContain($0);",
+    "description": "expects the list contains the item (===)",
+    "prefix": "tc",
+    "scope": "source.js"
+  },
+  "toContainEqual": {
+    "body": "expect(${1:list}).toContainEqual($0);",
+    "description": "expects the list contains the item (equals)",
+    "prefix": "tce",
+    "scope": "source.js"
+  },
+  "toEqual": {
+    "body": "expect($1).toEqual($0);",
+    "description": "expects the first argument to be equal with the second one",
+    "prefix": "te",
+    "scope": "source.js"
+  },
+  "toHaveBeenCalled": {
+    "body": "expect($1).toHaveBeenCalled();$0",
+    "description": "returns true if the spy was called",
+    "prefix": "thbc",
+    "scope": "source.js"
+  },
+  "toHaveBeenCalledTimes": {
+    "body": "expect($1).toHaveBeenCalledTimes($0);",
+    "description": "returns true if the spy has been called given times",
+    "prefix": "thbct",
+    "scope": "source.js"
+  },
+  "toHaveBeenCalledWith": {
+    "body": "expect($1).toHaveBeenCalledWith($0);",
+    "description": "returns true if the spy has been called with",
+    "prefix": "thbcw",
+    "scope": "source.js"
+  },
+  "toHaveBeenLastCalledWith": {
+    "body": "expect($1).toHaveBeenLastCalledWith($0);",
+    "description": "returns true if the spy has been last called with",
+    "prefix": "thblcw",
+    "scope": "source.js"
+  },
+  "toHaveLength": {
+    "body": "expect($1).toHaveLength($0);",
+    "description": "expects the object to have length",
+    "prefix": "thl",
+    "scope": "source.js"
+  },
+  "toHaveProperty": {
+    "body": "expect($1).toHaveProperty(${2:keyPath}, ${3:value});$0",
+    "description": "returns true if the argument matches the second object",
+    "prefix": "thp",
+    "scope": "source.js"
+  },
+  "toMatch": {
+    "body": "expect($1).toMatch($0);",
+    "description": "returns true if the argument matches the second value",
+    "prefix": "tm",
+    "scope": "source.js"
+  },
+  "toMatchInlineSnapshot": {
+    "body": "expect($1).toMatchInlineSnapshot($0);",
+    "description": "returns true if the argument matches the most recent inline snapshot",
+    "prefix": "tmis",
+    "scope": "source.js"
+  },
+  "toMatchObject": {
+    "body": "expect($1).toMatchObject($0);",
+    "description": "returns true if the argument matches the second object",
+    "prefix": "tmo",
+    "scope": "source.js"
+  },
+  "toMatchSnapshot": {
+    "body": "expect($1).toMatchSnapshot($0);",
+    "description": "returns true if the argument matches the most recent snapshot",
+    "prefix": "tms",
+    "scope": "source.js"
+  },
+  "toStrictEqual": {
+    "body": "expect($1).toStrictEqual($0);",
+    "description": "expects the first argument to be strictly equal with the second one",
+    "prefix": "tse",
+    "scope": "source.js"
+  },
+  "toThrow": {
+    "body": "expect(() => {\n\t$0\n}).toThrow($1);",
+    "description": "expects that the method will throw an error",
+    "prefix": "tt",
+    "scope": "source.js"
+  },
+  "toThrowError": {
+    "body": "expect(() => {\n\t$0\n}).toThrowError($1);",
+    "description": "expects that the method will throw an error",
+    "prefix": "tte",
+    "scope": "source.js"
+  },
+  "toThrowErrorMatchingInlineSnapshot": {
+    "body": "expect(() => {\n\t$0\n}).toThrowErrorMatchingInlineSnapshot();",
+    "description": "expects that the method will throw an error matching the inline snapshot",
+    "prefix": "ttemis",
+    "scope": "source.js"
+  },
+  "toThrowErrorMatchingSnapshot": {
+    "body": "expect(() => {\n\t$0\n}).toThrowErrorMatchingSnapshot();",
+    "description": "expects that the method will throw an error mathing the snapshpot",
+    "prefix": "ttems",
+    "scope": "source.js"
+  }
+}

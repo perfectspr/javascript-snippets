@@ -1,0 +1,62 @@
+{
+  "name": "javascript-snippets",
+  "description": "ES6+, Mocha, Jest snippets for Node, Vue, React, Typescript, HTML.",
+  "version": "0.0.1",
+  "displayName": "JavaScript Snippets",
+  "publisher": "perfectspr",
+  "icon": "images/javascript.png",
+  "galleryBanner": {
+    "color": "#000000",
+    "theme": "dark"
+  },
+  "engines": {
+    "vscode": "^0.10.0"
+  },
+  "categories": [
+    "Snippets"
+  ],
+  "keywords": [
+    "snippet",
+    "snippets",
+    "javascript",
+    "typescript",
+    "point-free"
+  ],
+  "contributes": {
+    "snippets": [
+      {
+        "language": "javascript",
+        "path": "./snippets/js.json"
+      },
+      {
+        "language": "typescript",
+        "path": "./snippets/js.json"
+      },
+      {
+        "language": "javascriptreact",
+        "path": "./snippets/js.json"
+      },
+      {
+        "language": "typescriptreact",
+        "path": "./snippets/js.json"
+      },
+      {
+        "language": "html",
+        "path": "./snippets/snippets.json"
+      },
+      {
+        "language": "vue",
+        "path": "./snippets/snippets.json"
+      }
+    ]
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/perfectspr/javascript-snippets"
+  },
+  "bugs": {
+    "url": "https://github.com/perfectspr/javascript-snippets/issues"
+  },
+  "homepage": "https://github.com/perfectspr/javascript-snippets"
+}
