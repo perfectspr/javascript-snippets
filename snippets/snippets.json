@@ -951,5 +951,29 @@
     "description": "expects that the method will throw an error mathing the snapshpot",
     "prefix": "ttems",
     "scope": "source.js"
+  },
+  "loggerError": {
+    "body": "logger.error($0)",
+    "description": "logger error",
+    "prefix": "error",
+    "scope": "source.js"
+  },
+  "loggerWarn": {
+    "body": "logger.warn($0)",
+    "description": "logger warning",
+    "prefix": "warn",
+    "scope": "source.js"
+  },
+  "loggerInfo": {
+    "body": "logger.info($0)",
+    "description": "logger info",
+    "prefix": "info",
+    "scope": "source.js"
+  },
+  "loggerSilly": {
+    "body": "logger.silly($0)",
+    "description": "logger silly",
+    "prefix": "silly",
+    "scope": "source.js"
   }
 }
