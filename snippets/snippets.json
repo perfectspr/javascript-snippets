@@ -224,26 +224,6 @@
     "body": "Promise.all(${1})${0}",
     "description": "Promise all (ES2015)"
   },
-  "export (ES2015)": {
-    "prefix": "exp",
-    "body": "export ${0}",
-    "description": "export (ES2015)"
-  },
-  "export default (ES2015)": {
-    "prefix": "expd",
-    "body": "export default ${0}",
-    "description": "export default (ES2015)"
-  },
-  "export as (ES2015)": {
-    "prefix": "expas",
-    "body": "export ${1} as ${2};${0}",
-    "description": "export as (ES2015)"
-  },
-  "export from (ES2015)": {
-    "prefix": "expf",
-    "body": "export ${2:name} from '${1}';${0}",
-    "description": "export from (ES2015)"
-  },
   "import module (ES2015)": {
     "prefix": "imp",
     "body": "import ${2:name} from '${1}';${0}",

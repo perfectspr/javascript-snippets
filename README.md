@@ -1,3 +1,8 @@
-# My Javascript Snippets
+# Javascript Snippets
 
-ES6+, Mocha, Jest snippets for Node, Vue, React, Typescript, HTML
+Javascript Snippets for coc-snippets and Visutal studio code.
+
+## Install
+:CocInstall https://github.com/perfectspr/javascript-snippets
+
+[Buy me a coffee](https://gitee.com/perfectspr/donate/blob/master/README.md) :heart:
